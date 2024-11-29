@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Workout Program - Fitness Website{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for workout in workouts %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">{{ workout.name }}</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for exercise in workout.exercises.all %}
+                        <li class="list-group-item">
+                            <strong>{{ exercise.name }}</strong><br>
+                            Equipment: {{ exercise.equipment }}<br>
+                            {{ exercise.description }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

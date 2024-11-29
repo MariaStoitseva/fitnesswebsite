@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Diet Plan - Fitness Website{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for diet in diets %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">Diet Plan {{ forloop.counter }}</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for meal in diet.meals.all %}
+                        <li class="list-group-item">
+                            <strong>{{ meal.name }}</strong><br>
+                            Ingredients: {{ meal.ingredients }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Trainer Dashboard - Fitness Website{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Workout Programs</h4>
+            <ul class="list-group">
+                {% for workout in workouts %}
+                <li class="list-group-item">
+                    <strong>{{ workout.name }}</strong>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>Clients for Today</h4>
+            <ul class="list-group">
+                {% for client in clients %}
+                <li class="list-group-item">
+                    {{ client.user.username }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

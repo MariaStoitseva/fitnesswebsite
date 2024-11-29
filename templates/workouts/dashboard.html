@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Fitness Website{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">Workout of the Day</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Push-Ups: 3 sets of 15</li>
+                        <li class="list-group-item">Squats: 3 sets of 20</li>
+                        <li class="list-group-item">Plank: Hold for 1 minute</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">Diet for the Day</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Breakfast: Oatmeal with Berries</li>
+                        <li class="list-group-item">Lunch: Grilled Chicken Salad</li>
+                        <li class="list-group-item">Dinner: Baked Salmon with Vegetables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
